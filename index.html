@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Jasa App Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .reseller-badge {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-crown text-2xl mr-2"></i>
+                <h1 class="text-2xl font-bold">PremiumAppStore</h1>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#products" class="hover:text-yellow-200 transition">Produk</a></li>
+                    <li><a href="#how-to-order" class="hover:text-yellow-200 transition">Cara Order</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-200 transition">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Jasa App Premium Terpercaya</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Dapatkan akses premium ke berbagai aplikasi populer dengan harga terjangkau dan proses cepat</p>
+            <a href="#products" class="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">
+                Lihat Produk <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Daftar Produk Kami</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Netflix Premium</h3>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded">Populer</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Akses unlimited ke semua konten Netflix tanpa iklan</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 25.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> 4K Ultra HD Quality</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Akses di 4 Perangkat</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tanpa Iklan</li>
+                        </ul>
+                        <button onclick="openOrderModal('Netflix Premium')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">YouTube Premium</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nikmati YouTube tanpa iklan dengan background play</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 20.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Bebas Iklan</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Background Play</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> YouTube Music Premium</li>
+                        </ul>
+                        <button onclick="openOrderModal('YouTube Premium')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 - WeTv -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">WeTv Premium</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Baru</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nikmati drama dan film eksklusif dari Tencent Video</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 18.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No Ads</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Exclusive Content</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> HD Streaming</li>
+                        </ul>
+                        <button onclick="openOrderModal('WeTv Premium')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 - Capcut -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Capcut Pro</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Aplikasi editing video dengan fitur premium</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 30.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Premium Effects</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No Watermark</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> All Features Unlocked</li>
+                        </ul>
+                        <button onclick="openOrderModal('Capcut Pro')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 - Vidio Premier -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Vidio Premier</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Akses konten eksklusif Vidio tanpa iklan</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 22.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Live Sports</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Original Series</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No Ads</li>
+                        </ul>
+                        <button onclick="openOrderModal('Vidio Premier')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 - Reseller VVIP -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Reseller VVIP</h3>
+                            <span class="reseller-badge text-xs font-semibold px-2.5 py-0.5 rounded">VIP</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Paket khusus untuk reseller dengan harga termurah</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 500.000</span>
+                            <span class="text-sm text-gray-500">/paket</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Harga Reseller</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Support 24/7</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Tutorial Marketing</li>
+                        </ul>
+                        <button onclick="openOrderModal('Reseller VVIP')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 - Jasa Buat Website Top Up -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Jasa Website Top Up</h3>
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded">Hot</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Jasa pembuatan website top up game & pulsa</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 1.200.000</span>
+                            <span class="text-sm text-gray-500">/project</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Responsive Design</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Integrated Payment</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Admin Dashboard</li>
+                        </ul>
+                        <button onclick="openOrderModal('Jasa Website Top Up')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 - Bstation Premium -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Bstation Premium</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Nikmati manga dan anime tanpa batas</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 15.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlimited Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Early Access</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No Ads</li>
+                        </ul>
+                        <button onclick="openOrderModal('Bstation Premium')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 9 - Alight Motion Pro -->
+                <div class="product-card bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold">Alight Motion Pro</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">Aplikasi editing video profesional dengan fitur premium</p>
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-purple-700">Rp 35.000</span>
+                            <span class="text-sm text-gray-500">/bulan</span>
+                        </div>
+                        <ul class="text-sm text-gray-600 mb-6 space-y-2">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> All Features Unlocked</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> No Watermark</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Premium Assets</li>
+                        </ul>
+                        <button onclick="openOrderModal('Alight Motion Pro')" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order Section -->
+    <section id="how-to-order" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Cara Order</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Pilih Produk</h3>
+                    <p class="text-gray-600">Pilih produk yang ingin Anda beli dan klik tombol "Beli Sekarang"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Isi Form Order</h3>
+                    <p class="text-gray-600">Isi form order dengan data yang valid dan lengkap</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow text-center">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Konfirmasi via WhatsApp</h3>
+                    <p class="text-gray-600">Anda akan diarahkan ke WhatsApp untuk konfirmasi pembayaran</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Kontak Kami</h2>
+            
+            <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow">
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fas fa-envelope text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Email</h3>
+                        <p class="text-gray-600">support@premiumappstore.id</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center mb-6">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fab fa-whatsapp text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">WhatsApp</h3>
+                        <p class="text-gray-600">+62 812-3456-7890</p>
+                    </div>
+                </div>
+                
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                        <i class="fab fa-telegram text-purple-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold">Telegram</h3>
+                        <p class="text-gray-600">@premiumappstore_bot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 PremiumAppStore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg shadow-xl w-11/12 md:w-3/4 lg:w-1/2 max-h-screen overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold">Form Order</h3>
+                    <button onclick="closeOrderModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="orderForm" class="space-y-4">
+                    <input type="hidden" id="selectedProduct" name="product">
+                    
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    
+                    <div>
+                        <label for="whatsapp" class="block text-sm font-medium text-gray-700 mb-1">Nomor WhatsApp</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    
+                    <div>
+                        <label for="productSelect" class="block text-sm font-medium text-gray-700 mb-1">Produk</label>
+                        <select id="productSelect" name="productSelect" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                            <option value="">Pilih Produk</option>
+                            <option value="Netflix Premium">Netflix Premium</option>
+                            <option value="YouTube Premium">YouTube Premium</option>
+                            <option value="WeTv Premium">WeTv Premium</option>
+                            <option value="Capcut Pro">Capcut Pro</option>
+                            <option value="Vidio Premier">Vidio Premier</option>
+                            <option value="Reseller VVIP">Reseller VVIP</option>
+                            <option value="Jasa Website Top Up">Jasa Website Top Up</option>
+                            <option value="Bstation Premium">Bstation Premium</option>
+                            <option value="Alight Motion Pro">Alight Motion Pro</option>
+                        </select>
+                    </div>
+                    
+                    <div id="packageContainer">
+                        <label for="package" class="block text-sm font-medium text-gray-700 mb-1">Paket</label>
+                        <select id="package" name="package" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                            <option value="">Pilih Paket</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="quantity" class="block text-sm font-medium text-gray-700 mb-1">Jumlah</label>
+                        <input type="number" id="quantity" name="quantity" min="1" value="1" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                    </div>
+                    
+                    <div>
+                        <label for="payment" class="block text-sm font-medium text-gray-700 mb-1">Metode Pembayaran</label>
+                        <select id="payment" name="payment" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-600">
+                            <option value="">Pilih Metode Pembayaran</option>
+                            <option value="Transfer Bank">Transfer Bank (Seabank)</option>
+                            <option value="DANA">DANA</option>
+                            <option value="OVO">OVO</option>
+                            <option value="Gopay">Gopay</option>
+                            <option value="ShopeePay">Qris AllPay</option>
+                        </select>
+                    </div>
+                    
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded transition">
+                            Order Sekarang
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Product packages mapping
+        const productPackages = {
+            'Netflix Premium': ['1 User - Rp 33.000/bulan', '2 User - Rp 30.000/bulan', '4 User - Rp 75.000/bulan'],
+            'YouTube Premium': ['Individual - Rp 10.000/bulan', 'Family (6 users) - Rp 45.000/bulan'],
+            'WeTv Premium': ['Monthly - Rp 18.000/bulan', 'Quarterly - Rp 45.000/3 bulan'],
+            'Capcut Pro': ['Monthly - Rp 25.000/bulan', 'Lifetime - Rp 150.000'],
+            'Vidio Premier': ['Monthly - Rp 22.000/bulan', 'Yearly - Rp 200.000/tahun'],
+            'Reseller VVIP': ['Starter Pack - Rp 170.000', 'Business Pack - Rp 1.000.000', 'Enterprise Pack - Rp 2.000.000'],
+            'Jasa Website Top Up': ['Basic Website - Rp 1.200.000', 'Advanced Website - Rp 2.500.000', 'Custom Website - Rp 4.000.000'],
+            'Bstation Premium': ['Monthly - Rp 15.000/bulan', 'Yearly - Rp 150.000/tahun'],
+            'Alight Motion Pro': ['Sharing - Rp 10.000/bulan', 'Private - Rp 75.000/bulan']
+        };
+
+        // WhatsApp number for orders
+        const whatsappNumber = "628953916944990"; // Ganti dengan nomor WhatsApp Anda
+
+        // Open order modal
+        function openOrderModal(product) {
+            document.getElementById('orderModal').classList.remove('hidden');
+            document.getElementById('selectedProduct').value = product;
+            document.getElementById('productSelect').value = product;
+            
+            // Update package options based on selected product
+            updatePackageOptions(product);
+        }
+
+        // Close order modal
+        function closeOrderModal() {
+            document.getElementById('orderModal').classList.add('hidden');
+        }
+
+        // Update package options based on selected product
+        function updatePackageOptions(product) {
+            const packageSelect = document.getElementById('package');
+            packageSelect.innerHTML = '<option value="">Pilih Paket</option>';
+            
+            if (product && productPackages[product]) {
+                productPackages[product].forEach(pkg => {
+                    const option = document.createElement('option');
+                    option.value = pkg;
+                    option.textContent = pkg;
+                    packageSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Generate WhatsApp message
+        function generateWhatsAppMessage(formData) {
+            const { name, whatsapp, email, productSelect, package, quantity, payment } = formData;
+            
+            let message = `Halo, saya ingin memesan:\n`;
+            message += `\n📦 *ORDER DETAIL*`;
+            message += `\nNama: ${name}`;
+            message += `\nWhatsApp: ${whatsapp}`;
+            if (email) message += `\nEmail: ${email}`;
+            message += `\nProduk: ${productSelect}`;
+            message += `\nPaket: ${package}`;
+            message += `\nJumlah: ${quantity}`;
+            message += `\nMetode Pembayaran: ${payment}`;
+            message += `\n\nSaya sudah mengisi form order di website. Bagaimana cara melanjutkan pembayaran?`;
+            
+            return encodeURIComponent(message);
+        }
+
+        // Redirect to WhatsApp
+        function redirectToWhatsApp(message) {
+            const url = `https://wa.me/${whatsappNumber}?text=${message}`;
+            window.open(url, '_blank');
+        }
+
+        // Event listener for product select change
+        document.getElementById('productSelect').addEventListener('change', function() {
+            updatePackageOptions(this.value);
+        });
+
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                email: document.getElementById('email').value,
+                productSelect: document.getElementById('productSelect').value,
+                package: document.getElementById('package').value,
+                quantity: document.getElementById('quantity').value,
+                payment: document.getElementById('payment').value
+            };
+            
+            // Validate form
+            if (!formData.name || !formData.whatsapp || !formData.productSelect || 
+                !formData.package || !formData.quantity || !formData.payment) {
+                alert('Harap isi semua field yang wajib diisi!');
+                return;
+            }
+            
+            // Generate WhatsApp message
+            const message = generateWhatsAppMessage(formData);
+            
+            // Redirect to WhatsApp
+            redirectToWhatsApp(message);
+            
+            // Close modal and reset form
+            closeOrderModal();
+            document.getElementById('orderForm').reset();
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target.id === 'orderModal') {
+                closeOrderModal();
+            }
+        });
+    </script>
+</body>
+</html>
